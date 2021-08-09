@@ -40,10 +40,5 @@ public class Triangle extends Shape{
         System.out.printf(this + ", area=%.2f \n", calcArea());
     }
 
-    @Override
-    public int compareTo(Object o) {
-        if (this.calcArea() > ((Shape)o).calcArea()) return 1;
-        if (this.calcArea() < ((Shape)o).calcArea()) return -1;
-        return 0;
-    }
+
 }

@@ -23,6 +23,12 @@ public abstract class Shape implements Drawable, Comparable, Cloneable {
 
     public abstract double calcArea ();
 
+    @Override
+    public int compareTo(Object o) {
+        if (this.calcArea() > ((Shape)o).calcArea()) return 1;
+        if (this.calcArea() < ((Shape)o).calcArea()) return -1;
+        return 0;
+    }
 
     @Override
     protected Object clone() throws CloneNotSupportedException {
